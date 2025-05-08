@@ -17,10 +17,6 @@ This AI-powered system generates AAOIFI-compliant accounting entries from natura
    ```bash
    pip install -r requirements.txt
    ```
-3. Create a `.env` file with your OpenAI API key:
-   ```
-   OPENAI_API_KEY=your_api_key_here
-   ```
 
 ## Usage
 
@@ -39,7 +35,7 @@ This AI-powered system generates AAOIFI-compliant accounting entries from natura
    }
    ```
 
-4. The response will include:
+3. The response will include:
    - Journal entries
    - Calculations
    - Detailed explanation
