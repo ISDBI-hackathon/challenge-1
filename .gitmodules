@@ -1,0 +1,3 @@
+[submodule "front-end/ayat-ai-accountant"]
+	path = front-end/ayat-ai-accountant
+	url = https://github.com/OussamaOuldRouis/ayat-ai-accountant
