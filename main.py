@@ -5,12 +5,29 @@ import os
 from dotenv import load_dotenv
 from services.accounting_processor import AccountingProcessor
 from services.nlp_processor import NLPProcessor
+from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
 app = FastAPI(
     title="AAOIFI Accounting Entry Generator",
     description="AI agent that generates AAOIFI-compliant accounting entries from natural language input",
+)
+
+# Add CORS middleware
+origins = [
+    "http://localhost:8080",
+    "http://127.0.0.1:8080",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["*"],
 )
 
 # Initialize processors
